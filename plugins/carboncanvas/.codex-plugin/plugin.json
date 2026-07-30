@@ -1,0 +1,36 @@
+{
+  "name": "carboncanvas",
+  "version": "0.1.0",
+  "description": "Create, synchronize, and review CarbonCanvas prototypes with the bundled CLI and an OAuth-enabled MCP fallback.",
+  "author": {
+    "name": "Umer Naeem",
+    "email": "me@umernaeem.com"
+  },
+  "homepage": "https://carboncanvas.carbontech.build",
+  "repository": "https://github.com/carbonteq/carboncanvas-plugins",
+  "keywords": [
+    "carboncanvas",
+    "design-review",
+    "prototypes",
+    "feedback"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CarbonCanvas",
+    "shortDescription": "Share and review AI-generated prototypes",
+    "longDescription": "Inspect CarbonCanvas projects, synchronize prototype files, work through design feedback, and use the remote MCP server when the bundled CLI cannot run.",
+    "developerName": "Umer Naeem",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://carboncanvas.carbontech.build",
+    "defaultPrompt": [
+      "Show me my CarbonCanvas projects.",
+      "Push this prototype to CarbonCanvas.",
+      "Review the latest CarbonCanvas feedback."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
