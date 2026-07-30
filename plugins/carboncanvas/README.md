@@ -52,3 +52,7 @@ Production endpoints:
 
 - Application and CLI: `https://carboncanvas.carbontech.build`
 - MCP: `https://carboncanvas.carbontech.build/mcp`
+
+## License
+
+Licensed under the [Apache License 2.0](../../LICENSE).

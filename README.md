@@ -32,3 +32,7 @@ Then run `/reload-plugins`.
 Do not paste CarbonCanvas access tokens into prompts or configuration files.
 The bundled CLI uses a browser-approved device login. The remote MCP server
 uses dynamic OAuth client registration with authorization code and PKCE.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).

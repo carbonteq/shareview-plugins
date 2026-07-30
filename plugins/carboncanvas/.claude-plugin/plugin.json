@@ -10,6 +10,7 @@
   },
   "homepage": "https://carboncanvas.carbontech.build",
   "repository": "https://github.com/carbonteq/carboncanvas-plugins",
+  "license": "Apache-2.0",
   "keywords": [
     "carboncanvas",
     "design-review",
