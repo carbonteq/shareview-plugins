@@ -1,0 +1,29 @@
+{
+  "name": "carboncanvas-plugins",
+  "owner": {
+    "name": "Umer Naeem",
+    "email": "me@umernaeem.com"
+  },
+  "plugins": [
+    {
+      "name": "carboncanvas",
+      "displayName": "CarbonCanvas",
+      "source": "./plugins/carboncanvas",
+      "description": "Create, synchronize, and review CarbonCanvas prototypes.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Umer Naeem",
+        "email": "me@umernaeem.com"
+      },
+      "homepage": "https://carboncanvas.carbontech.build",
+      "repository": "https://github.com/carbonteq/carboncanvas-plugins",
+      "category": "productivity",
+      "keywords": [
+        "carboncanvas",
+        "design-review",
+        "prototypes",
+        "feedback"
+      ]
+    }
+  ]
+}

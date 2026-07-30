@@ -1,0 +1,20 @@
+{
+  "name": "carboncanvas-plugins",
+  "interface": {
+    "displayName": "CarbonCanvas Plugins"
+  },
+  "plugins": [
+    {
+      "name": "carboncanvas",
+      "source": {
+        "source": "local",
+        "path": "./plugins/carboncanvas"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

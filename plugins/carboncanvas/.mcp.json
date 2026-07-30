@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "carboncanvas": {
+      "type": "http",
+      "url": "https://carboncanvas.carbontech.build/mcp"
+    }
+  }
+}
