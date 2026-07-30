@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "carboncanvas",
   "displayName": "CarbonCanvas",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Create, synchronize, and review CarbonCanvas prototypes with the bundled CLI and an OAuth-enabled MCP fallback.",
   "author": {
     "name": "Umer Naeem",

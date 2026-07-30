@@ -57,6 +57,19 @@ bun <cli> projects list --json
 bun <cli> files list --project <slug> --json
 ```
 
+When the user provides a CarbonCanvas document URL, read the project slug,
+document ID, and optional `version` query value directly from it. Inspect or
+pull that exact HTML version without first resolving its path:
+
+```sh
+bun <cli> files list --project <slug> --document <document-id> --version <number-or-id> --json
+bun <cli> files pull <document-id> --project <slug> --version <number-or-id> --to <local>
+```
+
+The version value may be the short positive number shown in current browser
+URLs or an immutable version UUID from an older URL. Omit `--version` only when
+the user wants the current version.
+
 Before every push, list the destination and run `files push ... --dry-run`.
 Summarize which files will be created, which HTML documents will receive a
 **New version**, which non-HTML assets will be **Replaced**, and which items
