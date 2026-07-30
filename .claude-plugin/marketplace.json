@@ -10,7 +10,7 @@
       "displayName": "CarbonCanvas",
       "source": "./plugins/carboncanvas",
       "description": "Create, synchronize, and review CarbonCanvas prototypes.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Umer Naeem",
         "email": "me@umernaeem.com"

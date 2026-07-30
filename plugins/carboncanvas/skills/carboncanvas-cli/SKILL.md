@@ -1,43 +1,67 @@
 ---
 name: carboncanvas-cli
-description: Use the comprehensive bundled CarbonCanvas CLI to inspect shared design projects, safely push or pull prototype files, and read or reply to user comments. Prefer this skill for CarbonCanvas work; fall back to the limited MCP server only when the CLI cannot run.
+description: Use the CarbonCanvas MCP server by default to work with shared design projects, prototypes, versions, and comments. Use the bundled CarbonCanvas CLI only when the user explicitly asks to use the CLI; treat the CLI as a beta/preview integration.
 ---
 
-# CarbonCanvas CLI
+# CarbonCanvas
 
-CarbonCanvas is a remote review workspace. Its project and file records are authoritative; use the bundled CLI instead of constructing API requests. Locate `scripts/cli.js` relative to this file and invoke it with Bun 1.3 or newer:
-
-```sh
-bun /absolute/path/to/carboncanvas-cli/scripts/cli.js help
-```
-
-Never print, log, request, or paste a CarbonCanvas access token.
-
-## Skill and MCP selection
-
-Use this skill and its CLI by default. It is the most comprehensive
-CarbonCanvas integration and supports multi-file projects, application
-bundles, binary assets, synchronization, and the full feedback workflow.
-
-Only fall back to the limited CarbonCanvas MCP server when the CLI cannot work,
-such as when sandbox network restrictions block CLI requests or the execution
-environment cannot run Bun. The production MCP endpoint is:
+CarbonCanvas is a remote review workspace. Its project and artifact records are
+authoritative. Use the configured CarbonCanvas MCP server for every
+CarbonCanvas request by default:
 
 ```text
 https://carboncanvas.carbontech.build/mcp
 ```
 
-MCP supports only short, self-contained HTML documents and a limited set of
-project, artifact, version, and comment operations. Do not choose MCP merely
-because it is available when the CLI works.
+Never print, log, request, or paste a CarbonCanvas access token or OAuth token.
+
+## MCP and CLI selection
+
+Use MCP for normal CarbonCanvas work, including project, artifact, version, and
+comment operations. Complete the request with MCP whenever its available tools
+support the action.
+
+### CLI beta/preview
+
+Treat the bundled CLI as a beta/preview integration. Use it if and only if the
+user explicitly asks to use the CarbonCanvas CLI or clearly requests a
+command-line workflow. Do not infer permission from an MCP limitation, a
+missing MCP tool, a multi-file task, the presence of `scripts/cli.js`, or the
+CLI's broader capabilities.
+
+If MCP cannot perform the requested action, explain the limitation and offer
+the beta CLI as an option. Wait for the user to explicitly choose the CLI
+before checking Bun, authenticating, or running any CLI command. If the user
+does not opt in, stop after explaining what MCP can and cannot do.
+
+After explicit CLI opt-in, locate `scripts/cli.js` relative to this file and
+invoke it with Bun 1.3 or newer:
+
+```sh
+bun /absolute/path/to/carboncanvas-cli/scripts/cli.js help
+```
+
+The preview CLI supports multi-file projects, application bundles, binary
+assets, synchronization, and the full feedback workflow. All remaining CLI
+instructions in this skill apply only after the user has explicitly opted in.
 
 ## Communicate for users
 
-Assume the user is a non-technical user. Operate the CLI yourself and communicate in plain language about prototypes, versions, and feedback rather than commands, flags, APIs, or storage details. Lead with what changed or what decision is needed. Do not ask the user to run or interpret CLI commands; involve them only for browser approval, meaningful product choices, and confirmation before overwriting or deleting work.
+Assume the user is a non-technical user. Operate MCP yourself by default. If
+the user explicitly opts into the preview CLI, operate it yourself and
+communicate in plain language about prototypes, versions, and feedback rather
+than commands, flags, APIs, or storage details. Lead with what changed or what
+decision is needed. Do not ask the user to run or interpret CLI commands;
+involve them only for browser approval, meaningful product choices, and
+confirmation before overwriting or deleting work.
 
-If CarbonCanvas CLI does not support an action, communicate it to the user directly instead of trying to find hacky workarounds such as using browser use or computer use tools on your own.
+If the selected CarbonCanvas integration does not support an action,
+communicate it directly instead of trying unsupported workarounds such as
+browser or computer-use tools.
 
-## First-time connection
+## CLI beta/preview connection
+
+Follow these steps only after explicit user opt-in to the CLI:
 
 1. Check `bun --version`. Make sure it is installed (v1.3+).
 2. Use the default production server, `https://carboncanvas.carbontech.build`,
@@ -48,7 +72,7 @@ If CarbonCanvas CLI does not support an action, communicate it to the user direc
 4. Run `auth status` and confirm who is connected without exposing credentials
    or unnecessary session details.
 
-## Project and file workflow
+## CLI project and file workflow
 
 List before acting:
 
