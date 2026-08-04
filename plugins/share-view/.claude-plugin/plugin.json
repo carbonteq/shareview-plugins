@@ -1,18 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "carboncanvas",
-  "displayName": "CarbonCanvas",
-  "version": "0.2.1",
-  "description": "Create, synchronize, and review CarbonCanvas prototypes with the bundled CLI and an OAuth-enabled MCP fallback.",
+  "name": "share-view",
+  "displayName": "ShareView",
+  "version": "0.3.0",
+  "description": "Create, synchronize, and review ShareView prototypes with the MCP server and an optional bundled CLI (beta).",
   "author": {
-    "name": "Umer Naeem",
-    "email": "me@umernaeem.com"
+    "name": "Carbonteq",
+    "email": "muzzamil.raza@carbonteq.com"
   },
   "homepage": "https://carboncanvas.carbontech.build",
   "repository": "https://github.com/carbonteq/carboncanvas-plugins",
   "license": "Apache-2.0",
   "keywords": [
-    "carboncanvas",
+    "shareview",
     "design-review",
     "prototypes",
     "feedback"

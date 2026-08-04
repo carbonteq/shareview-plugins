@@ -1,30 +1,25 @@
 {
-  "name": "carboncanvas-plugins",
+  "name": "share-view",
   "owner": {
-    "name": "Umer Naeem",
-    "email": "me@umernaeem.com"
+    "name": "Carbonteq",
+    "email": "muzzamil.raza@carbonteq.com"
   },
   "plugins": [
     {
-      "name": "carboncanvas",
-      "displayName": "CarbonCanvas",
-      "source": "./plugins/carboncanvas",
-      "description": "Create, synchronize, and review CarbonCanvas prototypes.",
-      "version": "0.2.1",
+      "name": "share-view",
+      "displayName": "ShareView",
+      "source": "./plugins/share-view",
+      "description": "Create, synchronize, and review ShareView prototypes.",
+      "version": "0.3.0",
       "author": {
-        "name": "Umer Naeem",
-        "email": "me@umernaeem.com"
+        "name": "Carbonteq",
+        "email": "muzzamil.raza@carbonteq.com"
       },
       "homepage": "https://carboncanvas.carbontech.build",
       "repository": "https://github.com/carbonteq/carboncanvas-plugins",
       "license": "Apache-2.0",
       "category": "productivity",
-      "keywords": [
-        "carboncanvas",
-        "design-review",
-        "prototypes",
-        "feedback"
-      ]
+      "keywords": ["shareview", "design-review", "prototypes", "feedback"]
     }
   ]
 }

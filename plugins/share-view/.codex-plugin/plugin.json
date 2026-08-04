@@ -1,0 +1,37 @@
+{
+  "name": "share-view",
+  "version": "0.3.0",
+  "description": "Create, synchronize, and review ShareView prototypes with the MCP server and an optional bundled CLI (beta).",
+  "author": {
+    "name": "Carbonteq",
+    "email": "muzzamil.raza@carbonteq.com"
+  },
+  "homepage": "https://carboncanvas.carbontech.build",
+  "repository": "https://github.com/carbonteq/carboncanvas-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "shareview",
+    "design-review",
+    "prototypes",
+    "feedback"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ShareView",
+    "shortDescription": "Share and review AI-generated prototypes",
+    "longDescription": "Inspect ShareView projects, synchronize prototype files, work through design feedback, and use the bundled CLI when the MCP server cannot cover a task.",
+    "developerName": "Carbonteq",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://carboncanvas.carbontech.build",
+    "defaultPrompt": [
+      "Show me my ShareView projects.",
+      "Push this prototype to ShareView.",
+      "Review the latest ShareView feedback."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
