@@ -1,30 +1,30 @@
 ---
-name: carboncanvas-cli
-description: Use the CarbonCanvas MCP server by default to work with shared design projects, prototypes, versions, and comments. Use the bundled CarbonCanvas CLI only when the user explicitly asks to use the CLI; treat the CLI as a beta/preview integration.
+name: shareview
+description: Use the ShareView MCP server by default to work with shared design projects, prototypes, versions, and comments. Use the bundled ShareView CLI only when the user explicitly asks to use the CLI; treat the CLI as a beta/preview integration.
 ---
 
-# CarbonCanvas
+# ShareView
 
-CarbonCanvas is a remote review workspace. Its project and artifact records are
-authoritative. Use the configured CarbonCanvas MCP server for every
-CarbonCanvas request by default:
+ShareView is a remote review workspace. Its project and artifact records are
+authoritative. Use the configured ShareView MCP server for every
+ShareView request by default:
 
 ```text
 https://carboncanvas.carbontech.build/mcp
 ```
 
-Never print, log, request, or paste a CarbonCanvas access token or OAuth token.
+Never print, log, request, or paste a ShareView access token or OAuth token.
 
 ## MCP and CLI selection
 
-Use MCP for normal CarbonCanvas work, including project, artifact, version, and
+Use MCP for normal ShareView work, including project, artifact, version, and
 comment operations. Complete the request with MCP whenever its available tools
 support the action.
 
 ### CLI beta/preview
 
 Treat the bundled CLI as a beta/preview integration. Use it if and only if the
-user explicitly asks to use the CarbonCanvas CLI or clearly requests a
+user explicitly asks to use the ShareView CLI or clearly requests a
 command-line workflow. Do not infer permission from an MCP limitation, a
 missing MCP tool, a multi-file task, the presence of `scripts/cli.js`, or the
 CLI's broader capabilities.
@@ -38,7 +38,7 @@ After explicit CLI opt-in, locate `scripts/cli.js` relative to this file and
 invoke it with Bun 1.3 or newer:
 
 ```sh
-bun /absolute/path/to/carboncanvas-cli/scripts/cli.js help
+bun /absolute/path/to/shareview/scripts/cli.js help
 ```
 
 The preview CLI supports multi-file projects, application bundles, binary
@@ -55,7 +55,7 @@ decision is needed. Do not ask the user to run or interpret CLI commands;
 involve them only for browser approval, meaningful product choices, and
 confirmation before overwriting or deleting work.
 
-If the selected CarbonCanvas integration does not support an action,
+If the selected ShareView integration does not support an action,
 communicate it directly instead of trying unsupported workarounds such as
 browser or computer-use tools.
 
@@ -81,7 +81,7 @@ bun <cli> projects list --json
 bun <cli> files list --project <slug> --json
 ```
 
-When the user provides a CarbonCanvas document URL, read the project slug,
+When the user provides a ShareView document URL, read the project slug,
 document ID, and optional `version` query value directly from it. Inspect or
 pull that exact HTML version without first resolving its path:
 
@@ -99,7 +99,7 @@ Summarize which files will be created, which HTML documents will receive a
 **New version**, which non-HTML assets will be **Replaced**, and which items
 will be removed.
 
-CarbonCanvas manages HTML history under the existing path. Appending HTML
+ShareView manages HTML history under the existing path. Appending HTML
 does not require `--confirm-overwrite` because the older HTML remains available.
 Pass `--confirm-overwrite` only after the user approves replacing the listed
 non-HTML assets.
@@ -119,6 +119,6 @@ Use `comments list --project <slug> --file <path> --json` to read threads, repli
 
 ## Product feedback
 
-When a CLI workflow is broken, unclear, or missing a useful capability, explain the issue plainly and offer to send concise feedback to the CarbonCanvas developers. After the user agrees, use `feedback --body ...` (or `--body-file`/stdin). Include the attempted command, expected and observed behavior, and safe error details when relevant. Never include credentials, secrets, or unnecessary project contents.
+When a CLI workflow is broken, unclear, or missing a useful capability, explain the issue plainly and offer to send concise feedback to the ShareView developers. After the user agrees, use `feedback --body ...` (or `--body-file`/stdin). Include the attempted command, expected and observed behavior, and safe error details when relevant. Never include credentials, secrets, or unnecessary project contents.
 
 Prefer `--json` for automation. Treat any nonzero exit as a failed operation, translate the safe error into plain language, and propose the next useful step. Show technical codes or per-file details only when they help resolve the problem. On partial push failure, do not attempt mirror deletion; fix the failed files and rerun the same command.
