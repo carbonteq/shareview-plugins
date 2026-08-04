@@ -8,7 +8,7 @@
       "name": "carboncanvas",
       "source": {
         "source": "local",
-        "path": "./plugins/carboncanvas"
+        "path": "./plugins/share-view"
       },
       "policy": {
         "installation": "AVAILABLE",

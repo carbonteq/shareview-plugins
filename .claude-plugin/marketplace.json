@@ -8,7 +8,7 @@
     {
       "name": "carboncanvas",
       "displayName": "CarbonCanvas",
-      "source": "./plugins/carboncanvas",
+      "source": "./plugins/share-view",
       "description": "Create, synchronize, and review CarbonCanvas prototypes.",
       "version": "0.2.1",
       "author": {
