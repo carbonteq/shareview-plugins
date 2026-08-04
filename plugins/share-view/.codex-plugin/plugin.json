@@ -1,26 +1,26 @@
 {
-  "name": "carboncanvas",
-  "version": "0.2.1",
-  "description": "Create, synchronize, and review CarbonCanvas prototypes with the bundled CLI and an OAuth-enabled MCP fallback.",
+  "name": "share-view",
+  "version": "0.3.0",
+  "description": "Create, synchronize, and review ShareView prototypes with the MCP server and an optional bundled CLI (beta).",
   "author": {
-    "name": "Umer Naeem",
-    "email": "me@umernaeem.com"
+    "name": "Carbonteq",
+    "email": "muzzamil.raza@carbonteq.com"
   },
   "homepage": "https://carboncanvas.carbontech.build",
   "repository": "https://github.com/carbonteq/carboncanvas-plugins",
   "license": "Apache-2.0",
   "keywords": [
-    "carboncanvas",
+    "shareview",
     "design-review",
     "prototypes",
     "feedback"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "CarbonCanvas",
+    "displayName": "ShareView",
     "shortDescription": "Share and review AI-generated prototypes",
-    "longDescription": "Inspect CarbonCanvas projects, synchronize prototype files, work through design feedback, and use the remote MCP server when the bundled CLI cannot run.",
-    "developerName": "Umer Naeem",
+    "longDescription": "Inspect ShareView projects, synchronize prototype files, work through design feedback, and use the bundled CLI when the MCP server cannot cover a task.",
+    "developerName": "Carbonteq",
     "category": "Productivity",
     "capabilities": [
       "Read",
@@ -28,9 +28,9 @@
     ],
     "websiteURL": "https://carboncanvas.carbontech.build",
     "defaultPrompt": [
-      "Show me my CarbonCanvas projects.",
-      "Push this prototype to CarbonCanvas.",
-      "Review the latest CarbonCanvas feedback."
+      "Show me my ShareView projects.",
+      "Push this prototype to ShareView.",
+      "Review the latest ShareView feedback."
     ]
   },
   "mcpServers": "./.mcp.json"

@@ -1,11 +1,11 @@
 {
-  "name": "carboncanvas-plugins",
+  "name": "share-view",
   "interface": {
-    "displayName": "CarbonCanvas Plugins"
+    "displayName": "ShareView Plugins"
   },
   "plugins": [
     {
-      "name": "carboncanvas",
+      "name": "share-view",
       "source": {
         "source": "local",
         "path": "./plugins/share-view"
