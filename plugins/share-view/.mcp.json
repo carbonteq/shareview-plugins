@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "carboncanvas": {
+    "shareview": {
       "type": "http",
       "url": "https://carboncanvas.carbontech.build/mcp"
     }
