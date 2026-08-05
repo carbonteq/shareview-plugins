@@ -15,8 +15,8 @@
         "name": "Carbonteq",
         "email": "muzzamil.raza@carbonteq.com"
       },
-      "homepage": "https://carboncanvas.carbontech.build",
-      "repository": "https://github.com/carbonteq/carboncanvas-plugins",
+      "homepage": "https://shareview.carbontech.build",
+      "repository": "https://github.com/carbonteq/shareview-plugins",
       "license": "Apache-2.0",
       "category": "productivity",
       "keywords": ["shareview", "design-review", "prototypes", "feedback"]
