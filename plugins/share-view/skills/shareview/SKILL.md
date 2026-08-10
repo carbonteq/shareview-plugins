@@ -34,6 +34,12 @@ bun /absolute/path/to/scripts/cli.js help
 Prefer `--json` for automation. Treat a nonzero exit as failure. Follow the
 CLI's authentication instructions when no session is available.
 
+When authentication is required, run `auth login` without `--no-browser` so
+ShareView opens the approval page in the user's browser. Tell the user to
+complete approval there, then wait for the CLI to confirm authentication. Use
+`--no-browser` only when the user explicitly requests a headless flow or the
+browser cannot be opened.
+
 ## Keep the domain model straight
 
 - A **project** is a review workspace containing artifacts.
