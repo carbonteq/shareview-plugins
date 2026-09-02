@@ -6,10 +6,10 @@ feedback.
 
 The plugin includes:
 
-- The ShareView MCP server as the default integration for projects and
-  short, self-contained HTML documents.
+- The ShareView MCP server as the default integration for organizations,
+  projects, and short, self-contained HTML documents.
 - The ShareView CLI skill (beta/preview) for multi-file applications, HTML,
-  CSS, JavaScript, images, fonts, synchronization, and comment replies.
+  CSS, JavaScript, images, fonts, project move, and comment replies.
 
 ## Requirements
 
@@ -49,10 +49,11 @@ The remote MCP connection prompts for authorization when it is first used.
 
 ## Integration behavior
 
-MCP is the default integration. It covers projects and short,
+MCP is the default integration. It covers organizations, projects, and short,
 self-contained HTML artifacts, and does not support multi-file application
-bundles or binary assets. The bundled CLI is a beta/preview that supports
-the complete ShareView workflow; it is used only when explicitly requested.
+bundles, binary assets, org members, or project move. The bundled CLI is a
+beta/preview that supports the complete ShareView workflow; it is used only
+when explicitly requested.
 
 Production endpoints:
 

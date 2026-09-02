@@ -3,7 +3,7 @@
   "name": "share-view",
   "displayName": "ShareView",
   "version": "0.4.1",
-  "description": "Create, synchronize, and review ShareView prototypes with the MCP server and an optional bundled CLI (beta).",
+  "description": "Create organizations and projects, review ShareView prototypes with the MCP server, and use the bundled CLI (beta) for multi-file bundles.",
   "author": {
     "name": "Carbonteq",
     "email": "muzzamil.raza@carbonteq.com"

@@ -8,7 +8,7 @@ reviewing AI-generated prototypes, by [Carbonteq](https://carbonteq.com).
 
 | Plugin | Description |
 | --- | --- |
-| [ShareView](plugins/share-view) | Create, synchronize, and review ShareView prototypes with the MCP server and an optional bundled CLI (beta). |
+| [ShareView](plugins/share-view) | Create organizations and projects, review ShareView prototypes with the MCP server, and use the bundled CLI (beta) for multi-file bundles. |
 
 ## Install for Claude Code
 
