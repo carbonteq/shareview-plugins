@@ -49,9 +49,9 @@ The remote MCP connection prompts for authorization when it is first used.
 
 ## Integration behavior
 
-MCP is the default integration. It covers organizations, projects, and short,
+MCP is the default integration. It covers organizations, projects, project move, and short,
 self-contained HTML artifacts, and does not support multi-file application
-bundles, binary assets, org members, or project move. The bundled CLI is a
+bundles, binary assets, or org members. The bundled CLI is a
 beta/preview that supports the complete ShareView workflow; it is used only
 when explicitly requested.
 
