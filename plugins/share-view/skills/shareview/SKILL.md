@@ -1,6 +1,6 @@
 ---
 name: shareview-cli
-description: Operate ShareView review workspaces with the bundled CLI. Use when an agent needs to discover or create organizations and projects, upload or download artifact versions, inspect or create version-scoped comments, respond to review feedback, or decide between the ShareView CLI and MCP in a network-restricted environment.
+description: Operate ShareView review workspaces with the bundled CLI. Use when an agent needs to discover or create workspaces and projects, upload or download artifact versions, inspect or create version-scoped comments, respond to review feedback, or decide between the ShareView CLI and MCP in a network-restricted environment.
 ---
 
 # ShareView
@@ -42,10 +42,12 @@ browser cannot be opened.
 
 ## Keep the domain model straight
 
-- An **organization** contains projects. New users start without one; create
-  or join an organization before creating a project.
-- A **project** belongs to an organization. Visibility (`private` or `public`)
-  is in-org only; do not add clients to the organization to share a project.
+- A **workspace** contains projects. New users start without one; create
+  or join a workspace before creating a project. (Earlier versions called this
+  an "organization"; the `orgs` command and `--org` flags still work as
+  deprecated aliases.)
+- A **project** belongs to a workspace. Visibility (`private` or `public`)
+  is in-workspace only; do not add clients to the workspace to share a project.
 - An **artifact** is a stable identity with append-only immutable versions.
 - An upload creates an artifact when `--artifact` is absent and appends a
   version when it is present.
@@ -55,8 +57,8 @@ browser cannot be opened.
   apply feedback locally, append a version, reply, then resolve when addressed.
 
 Use identifiers returned by ShareView rather than guessing them from names.
-Create a project with `--org` when the user belongs to more than one
-organization; omit it only when they belong to exactly one. `projects move`
-moves a project between organizations. Use `comments anchor-schema` for the
+Create a project with `--workspace` when the user belongs to more than one
+workspace; omit it only when they belong to exactly one. `projects move`
+moves a project between workspaces. Use `comments anchor-schema` for the
 exact `--anchor-file` contract and only create threads from real anchors
 captured by the ShareView preview.
