@@ -40,6 +40,14 @@ complete approval there, then wait for the CLI to confirm authentication. Use
 `--no-browser` only when the user explicitly requests a headless flow or the
 browser cannot be opened.
 
+## Marks on an image
+
+Whenever the user wants anything marked on an existing image — pointed out, circled, labeled, highlighted, blurred, hidden, or drawn — use ShareView MCP `annotate_preview_image` then `create_preview_image_artifact` on that image. The reason does not matter. Do not generate, redraw, or paint a new image, and do not ask them to name these tools.
+
+- `blur` hides a rectangle.
+- `rect`, `ellipse`, `arrow`, `line`, and `text` are outlines and labels. Each mark gets its own color.
+- Show the preview image, then the saved image with the app and share links.
+
 ## Keep the domain model straight
 
 - A **workspace** contains projects. New users start without one; create
