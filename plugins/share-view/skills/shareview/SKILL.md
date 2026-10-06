@@ -20,7 +20,12 @@ curl --silent --show-error --output /dev/null \
 
 Use the CLI when this returns `200`. If the request fails or returns another
 status because the environment cannot reach the server, use the configured
-ShareView MCP endpoint at `https://shareview.carbontech.build/mcp`.
+ShareView MCP endpoint at `https://shareview.carbontech.build/mcp`. For the
+latest single-file markdown document on MCP, read with
+`get_preview_artifact_content` then patch with `edit_markdown_artifact`
+(pass `content_hash`; retry once on `STALE_CONTENT` / `TARGET_NOT_FOUND` /
+`TARGET_AMBIGUOUS`). `update_preview_artifact` still appends a version;
+use it for HTML and for a new markdown review snapshot.
 
 ## Use the CLI
 
@@ -56,7 +61,7 @@ Whenever the user wants anything marked on an existing image — pointed out, ci
   deprecated aliases.)
 - A **project** belongs to a workspace. Visibility (`private` or `public`)
   is in-workspace only; do not add clients to the workspace to share a project.
-- An **artifact** is a stable identity with append-only immutable versions.
+- An **artifact** is a stable identity with numbered versions. File upload appends a version. People edit the latest **single-file markdown** version in place. A connected agent patches that same latest markdown in place (`edit_markdown_artifact` after `get_preview_artifact_content`). MCP `update_preview_artifact` and CLI markdown uploads still append a version. HTML MCP updates still append.
 - An upload creates an artifact when `--artifact` is absent and appends a
   version when it is present.
 - A **bundle** is a single HTML/Markdown file, a ZIP, or a folder packaged as a
@@ -67,6 +72,8 @@ Whenever the user wants anything marked on an existing image — pointed out, ci
 Use identifiers returned by ShareView rather than guessing them from names.
 Create a project with `--workspace` when the user belongs to more than one
 workspace; omit it only when they belong to exactly one. `projects move`
-moves a project between workspaces. Use `comments anchor-schema` for the
+moves a project between workspaces. `artifacts move` (CLI) and `move_artifact`
+(MCP) move one artifact to another project in the same workspace; that is not
+`move_project`. Use `comments anchor-schema` for the
 exact `--anchor-file` contract and only create threads from real anchors
 captured by the ShareView preview.
